@@ -27,6 +27,22 @@ public class Sovereignty {
 //+=======+
 
 	public String getChatFriendlyCoordinate(){
+		String returning = "";
+		
+		
+		int x = (int) coordinate.getLeft();
+		int y = (int) coordinate.getRight();
+		
+		if(x < 0){
+			returning += "-";
+			x*=-1;
+		}
+		
+		char char1 = (char) (x/26+64);
+		char char2 = (char) (x%26+64);
+		
+		returning+=char1+char2+", "+y;
+		return returning;
 		
 	}
 	
