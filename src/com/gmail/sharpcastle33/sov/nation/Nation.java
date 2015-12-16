@@ -18,6 +18,10 @@ ArrayList<Sovereignty> sov;
 //+============+
 //|CONSTRUCTION|
 //+============+
+
+public Nation(){
+	
+}
 		
 //+=======+
 //|METHODS|

@@ -14,6 +14,10 @@ public class Sovereignty {
 //|CONSTRUCTION|
 //+============+
 	
+public Sovereignty(){
+	
+}
+	
 //+=======+
 //|METHODS|
 //+=======+
