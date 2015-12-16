@@ -49,7 +49,7 @@ public class Sovereignty {
 //+=======+
 //|GET/SET|
 //+=======+
-	//HI BRYAN
+
 	public Nation getSovereign(){
 		return this.sovereign;
 	}
