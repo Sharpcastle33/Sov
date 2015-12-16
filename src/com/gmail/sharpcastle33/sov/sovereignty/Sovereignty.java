@@ -11,7 +11,7 @@ public class Sovereignty {
 //+====+
 	
 	Nation sovereign;
-	Pair coordinate;
+	final Pair coordinate;
 	
 //+============+
 //|CONSTRUCTION|
@@ -44,6 +44,22 @@ public class Sovereignty {
 		returning+=char1+char2+", "+y;
 		return returning;
 		
+	}
+	
+//+=======+
+//|GET/SET|
+//+=======+
+	//HI BRYAN
+	public Nation getSovereign(){
+		return this.sovereign;
+	}
+	
+	public void setSovereign(Nation n){
+		this.sovereign = n;
+	}
+	
+	public Pair getCoord(){
+		return this.coordinate;
 	}
 	
 	
