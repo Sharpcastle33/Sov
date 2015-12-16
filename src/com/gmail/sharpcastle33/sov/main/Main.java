@@ -1,5 +1,7 @@
 package com.gmail.sharpcastle33.sov.main;
 
+import org.bukkit.plugin.java.JavaPlugin;
+
 public class Main extends JavaPlugin{
 
 	@Override
