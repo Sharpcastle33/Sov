@@ -1,9 +1,13 @@
 package com.gmail.sharpcastle33.sov.main;
 
-public class Main {
+public class Main extends JavaPlugin{
 
-	public Main() {
-		super();
-		// TODO Auto-generated constructor stub
+	@Override
+	public void onEnable(){
+		
+	}
+	@Override
+	public void onDisable(){
+		
 	}
 }
