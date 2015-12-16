@@ -38,8 +38,8 @@ public class Sovereignty {
 			x*=-1;
 		}
 		
-		char char1 = (char) (x/26+64);
-		char char2 = (char) (x%26+64);
+		char char1 = (char) (int) ((x/26)+65);
+		char char2 = (char) (int) ((x%26)+65);
 		
 		returning+=char1+char2+", "+y;
 		return returning;
