@@ -1,6 +1,6 @@
 package com.gmail.sharpcastle33.sov.sovereignty;
 
-import org.apache.commons.lang3.tuple.Pair;
+import com.gmail.sharpcastle33.sov.util.Pair;
 
 import com.gmail.sharpcastle33.sov.nation.Nation;
 
@@ -30,8 +30,8 @@ public class Sovereignty {
 		String returning = "";
 		
 		
-		int x = (int) coordinate.getLeft();
-		int y = (int) coordinate.getRight();
+		int x = (int) coordinate.getL();
+		int y = (int) coordinate.getR();
 		
 		if(x < 0){
 			returning += "-";
