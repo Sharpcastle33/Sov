@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Properties;
 import java.util.UUID;
 
+import org.bukkit.entity.Player;
+
 import com.gmail.sharpcastle33.sov.util.FileManager;
 
 public class NationManager {
@@ -64,6 +66,25 @@ public class NationManager {
 		nations.setProperty("nationnames",temp);
 		FileManager.save(nations,"nations.properties");
 	}
+	
+	public boolean hasNation(Player p){
+		Nation n = getNation(p);
+		if(n != null){
+			return true;
+		}else return false;
+	}
+	
+	public Nation getNation(Player p){
+		Nation n = null;
+		UUID id = p.getUniqueId();
+		for(Nation nat : nats){
+			if(nat.getMembers().contains(id)){
+				return nat;
+			}
+		}
+		return n;
+	}
+	
 	public Nation getNation(String name){
 		for(Nation n: nats){
 			if(n.getName() == name){
@@ -72,6 +93,7 @@ public class NationManager {
 		}
 		return null;
 	}
+	
 	public Nation loadNation(String name){
 		Nation n = null;
 		
@@ -102,5 +124,14 @@ public class NationManager {
 		n.setMembers(members);
 		n.setLeaders(leaders);
 		return n;
+	}
+	
+	public ArrayList<String> getNationNames(){
+		return this.nationNames;
+	}
+	
+	public void createNation(String name, Player p){
+		nationNames.add(name);
+		nats.add(new Nation(p.getUniqueId(), name));
 	}
 }

@@ -5,8 +5,7 @@ import java.util.UUID;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-
-import com.gmail.sharpcastle33.sov.sovereignty.Sovereignty;
+import org.bukkit.entity.Player;
 
 public class Nation {
 
@@ -95,6 +94,8 @@ public Nation(String name, ArrayList<UUID>members, ArrayList<UUID>leaders){
 	public void setLeaders(ArrayList<UUID> l){
 		this.leaders = l;
 	}
+	
+	
 
 
 }

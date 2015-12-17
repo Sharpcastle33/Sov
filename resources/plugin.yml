@@ -1,3 +1,14 @@
 name: Sovereignty
 main: com.gmail.sharpcastle33.sov.main.Main
 version: 0.0.1
+commands:
+   sov:
+      description: Type /sov help for help with this command.
+      usage: /<command>
+      permission: sov.basic
+      permission-message: You don't have <permission>
+   nation:
+      description: Type /nation help for help with this command.
+      usage: /<command>
+      permission: sov.basic
+      permission-message: You don't have <permission>
