@@ -46,6 +46,11 @@ public class SovereigntyManager {
 	}
 	
 	public void saveSov(){
+		for(Sovereignty s : sovList){
+			if(s.getSovereign().getName() != sov.getProperty(s.getParsedSovName())){
+				sov.setProperty(s.getParsedSovName(), s.getSovereign().getName());
+			}
+		}
 		FileManager.save(sov,"sov.properties");
 	}
 	

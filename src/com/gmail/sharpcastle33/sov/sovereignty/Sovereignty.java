@@ -62,6 +62,14 @@ public class Sovereignty {
 		return this.coordinate;
 	}
 	
+	public String getParsedSovName(){
+		String returning = "";
+		returning+=this.coordinate.getL();
+		returning+=",";
+		returning+=this.coordinate.getR();
+		return returning;
+	}
+	
 	
 	
 }

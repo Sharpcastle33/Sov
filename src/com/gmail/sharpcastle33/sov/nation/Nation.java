@@ -3,6 +3,9 @@ package com.gmail.sharpcastle33.sov.nation;
 import java.util.ArrayList;
 import java.util.UUID;
 
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+
 import com.gmail.sharpcastle33.sov.sovereignty.Sovereignty;
 
 public class Nation {
@@ -13,25 +16,50 @@ public class Nation {
 
 ArrayList<UUID> members;
 ArrayList<UUID> leaders;
-ArrayList<Sovereignty> sov;
 String name;
 		
 //+============+
 //|CONSTRUCTION|
 //+============+
 
-public Nation(){
-	
+public Nation(UUID u, String name){
+	this.name = name;
+	members.add(u);
+}
+
+public Nation(String name, ArrayList<UUID>members, ArrayList<UUID>leaders){
+	this.name = name;
+	this.members = members;
+	this.leaders = leaders;
 }
 		
 //+=======+
 //|METHODS|
 //+=======+
 
+	public String getMembersChatFriendly(){
+		String returning = "";
+		for(UUID u : members){
+			if(leaders.contains(u)){
+				returning+=ChatColor.GOLD;
+			}
+			returning += Bukkit.getServer().getPlayer(u).getDisplayName();
+			returning+=", ";
+			if(leaders.contains(u)){
+				returning+=ChatColor.WHITE;
+			}
+		}
+		return returning;
+	}
+
 //+=======+
 //|GET/SET|
 //+=======+
-
+	
+	public String getName(){
+		return this.name;
+	}
+	
 	public ArrayList<UUID> getMembers(){
 		return this.members;
 	}
