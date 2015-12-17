@@ -15,7 +15,7 @@ public class SovereigntyManager {
 	static Properties sov; 
 	
 	/*
-	 * 1,1 - nation 
+	 * 1,1 - nationname
 	 */
 	
 	ArrayList<Sovereignty>sovList;
